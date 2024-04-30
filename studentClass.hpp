@@ -21,7 +21,6 @@ class Student {
 private:
     /**
      * @brief Member Variables
-     * 
      */
     string studentName;
     string studentSurname;
@@ -29,9 +28,10 @@ private:
 
     /**
       * @brief Member Functions
-     * 
      */
 public:
+    Student();
+    Student(string, string, int);
     void displayInformation();
     void setName(string name) {
         studentName = name;
@@ -59,6 +59,20 @@ public:
         return studentNumber;
     }
 };
+
+Student::Student() {
+    cout << "Default Constructor Worked." << endl;
+    studentName = "NULL";
+    studentSurname = "NULL";
+    studentNumber = 0;
+}
+
+Student::Student(string name, string surname, int number) {
+    cout << "Constructor Worked." << endl;
+    studentName = name;
+    studentSurname = surname;
+    studentNumber = number;
+}
 
 void Student::displayInformation() {
     cout << "Student Name : " << studentName << endl;

@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:56:13 by bkas              #+#    #+#             */
-/*   Updated: 2024/04/30 17:00:14 by bkas             ###   ########.fr       */
+/*   Updated: 2024/04/30 18:29:20 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ int main() {
     Student student1;
     Student student2;
     Student student3;
+    Student student4("Ahmet Mert", "Kalaman", 433);
+    // Student studentArray[5];
 
-    student1.setName("Batuhan");
-    student1.setSurname("Kaş");
-    student1.setNumber(789);
+    // student1.setName("Batuhan");
+    // student1.setSurname("Kaş");
+    // student1.setNumber(789);
     student1.displayInformation();
 
     student2.setName("Melih");
@@ -31,14 +33,14 @@ int main() {
     string name = student2.getName();
     string surname = student2.getSurname();
     int number = student2.getNumber();
-    
+
     cout << "Student Name : " << name << endl;
     cout << "Student SurName : " << surname << endl;
     cout << "Student Number : " << number << endl << endl;
 
     student3.setInformation("Ercan", "Deniz", 4242);
     student3.displayInformation();
-
+    student4.displayInformation();
     return 0;
 }
 
