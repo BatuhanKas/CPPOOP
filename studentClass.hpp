@@ -11,7 +11,7 @@ using namespace std;
  * private -> Sadece sınıfın içerisinden erişilebilir. (Default)
  * Main kısımdan erişilemez.
  * 
- * protected -> Sadece Class içerisinde ve Miras alan Class'larda erişilebilir.
+ * protected -> Sadece Class içerisinden ve Miras alan Class'lardan erişilebilir.
  * Main kısımdan erişilemez.
  * 
  * public -> Her yerden erişilebilir.
@@ -40,6 +40,13 @@ public:
         studentSurname = surname;
     }
     void setNumber(int number) {
+        studentNumber = number;
+    }
+    // Ya da daha pratik olacak şekilde aşağıdaki gibi
+    // yapabilirim.
+    void setInformation(string name, string surname, int number) {
+        studentName = name;
+        studentSurname = surname;
         studentNumber = number;
     }
     string getName() {
