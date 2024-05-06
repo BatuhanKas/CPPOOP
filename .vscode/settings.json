@@ -4,6 +4,8 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "iomanip": "cpp",
-        "string": "cpp"
-    }
+        "string": "cpp",
+    },
+    "editor.formatOnSave": true,
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }"
 }

@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:56:13 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/02 14:34:03 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/06 16:11:52 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main() {
     Student student3;
     Student student4("Ahmet Mert", "Kalaman", 433);
     Student student6(student4);
+    Student student7;
     // Student studentArray[5];
 
     // student1.setName("Batuhan");
@@ -48,12 +49,15 @@ int main() {
         Student student5;
     }
     cout << "student5" << endl;
+
+    student7.setInformation("Kadir", "Soker", 3131);
+    student7.displayInformation();
     return 0;
 }
 
 /**
  * @brief Class Public olsaydı;
- * 
+ *
  * int main() {
 
     Student student1;
@@ -71,5 +75,5 @@ int main() {
 
     return 0;
 }
- * 
+ *
  */
