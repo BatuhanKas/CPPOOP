@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 14:08:37 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/06 17:08:24 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/08 17:13:07 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,9 @@ complexNumber complexNumber::addComplex(complexNumber &oth) {
     return retNum;
 }
 
-// 4+5i 7-8i
-// 11-3i
+complexNumber complexNumber::subtractComplex(complexNumber &oth) {
+    complexNumber retNum;
+    retNum.real = real - oth.real;
+    retNum.img = img - oth.img;
+    return retNum;
+}

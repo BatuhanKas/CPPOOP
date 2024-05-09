@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   complexNumber.hpp                                  :+:      :+:    :+:   */
+/*   ytclass.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 14:02:49 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/08 15:53:31 by bkas             ###   ########.fr       */
+/*   Created: 2024/05/09 15:50:37 by bkas              #+#    #+#             */
+/*   Updated: 2024/05/09 16:44:03 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COMPLEXNUMBER_HPP
-#define COMPLEXNUMBER_HPP
+#ifndef YTCLASS_HPP
+#define YTCLASS_HPP
 
 #include <iostream>
+#include <list>
+
 using namespace std;
 
-class complexNumber {
-   private:
-    int real, img;
-
+class YtClass {
    public:
-    complexNumber(int r = 0, int i = 0);
-    ~complexNumber();
-    complexNumber(complexNumber &oth);
-    int getReal();
-    int getImag();
-    void setValue(int r = 0, int i = 0);
-    void displayComplexNumbers();
-    complexNumber addComplex(complexNumber &oth);
-    complexNumber subtractComplex(complexNumber &oth);
+    string Name;
+    string OwnerName;
+    int SubsCount;
+    list<string> VideoTitles;
+
+    void SetChannel(string name, string ownername);
+    void getInfo();
+    YtClass();
+    YtClass(string name, string ownername);
+};
+
+class CookingCh : public YtClass {
+   public:
+    CookingCh(string name, string surname)
+        : YtClass(name, surname) {}
+    CookingCh() : YtClass() {}
 };
 
 #endif

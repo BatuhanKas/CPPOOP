@@ -5,6 +5,7 @@
         "iostream": "cpp",
         "iomanip": "cpp",
         "string": "cpp",
+        "list": "cpp"
     },
     "editor.formatOnSave": true,
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }"
