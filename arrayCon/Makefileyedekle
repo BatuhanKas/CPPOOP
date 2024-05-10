@@ -1,0 +1,106 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jonchich <jonchich@42kocaeli.com.tr>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/06/16 17:21:51 by jonchich          #+#    #+#              #
+#    Updated: 2024/05/09 20:00:45 by jonchich         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME        = cub3D
+
+SRC         = main.c\
+			  get_data.c\
+			  get_data_header.c\
+			  get_data_map.c\
+			  check_data.c\
+			  check_data_header.c\
+			  check_data_header_color.c\
+			  check_data_header_xpm.c\
+			  check_data_map.c\
+			  free_data.c\
+			  init_mlx.c\
+			  init_structure.c\
+			  start_game.c\
+			  init_screen\
+			  raycast.c\
+			  ray_wall_properties.c\
+			  ray_texture_properties.c\
+			  ray_properties.c\
+			  ray_draw_until_hit_wall.c\
+			  ray_fill_screen.c\
+			  player_move.c\
+			  player_turn.c\
+			  ft_loop.c\
+			  events.c\
+			  drawminimap.c\
+			  door_utils.c \
+			  char_to_int_tab.c
+
+SRCDIR      = ./
+
+OBJ        = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(BASE)))
+
+BASE         = $(basename $(notdir $(SRC)))
+
+OBJDIR      = ./obj
+
+CC          = gcc -Wall -Wextra -Werror
+
+CFLAGS      = -g
+
+INCLUDE     = -Ilibftprintf -Imlx
+
+RM          = rm -f
+
+ECHO        = echo
+
+LIBFT =     ./libftprintf/libftprintf.a
+
+MLX =		./mlx/libmlx.a
+
+LINKERS =	-Llibftprintf -lftprintf -Lmlx -lmlx
+
+FRAMEWORK =	-framework OpenGL -framework AppKit
+
+all         : $(NAME)
+
+$(LIBFT):
+	@make -C ./libftprintf bonus
+
+$(MLX):
+	@make -C ./mlx 2>/dev/null
+
+$(NAME): $(MLX) $(LIBFT) $(OBJ)
+	@$(CC) $(CFLAGS) $(INCLUDE) $(OBJ) $(LINKERS) $(FRAMEWORK) -o $(NAME)
+	@$(ECHO) "\033[0;32m> cub3D Compiled\033[0m"
+
+$(OBJDIR) :
+	@test -d $(OBJDIR) || mkdir $(OBJDIR)
+
+$(OBJDIR)/%.o   : $(SRCDIR)/%.c | $(OBJDIR)
+	@$(CC) $(INCLUDE) $(CFLAGS)  -c -o $@ $< \
+	&& $(ECHO) "\033[1;30m[CC] : Compiled $(notdir $<) \
+	[\033[0;32mOk\033[1;30m]\033[0m" \
+	|| $(ECHO) "\033[1;30m[CC] : Compiled $(notdir $<) \
+	[\033[0;7;31mError\033[0;1;30m]\033[0m"
+
+clean       :
+	@make -C ./libftprintf clean
+	@$(RM) -r $(OBJDIR)
+	@$(ECHO) "\033[0;34m> cub3D Directory cleaned\033[0m"
+
+fclean      : clean
+	@make -C ./libftprintf fclean
+	@make -C ./mlx clean
+	@$(RM) $(NAME)
+	@$(ECHO) "\033[0;35m> cub3D Binaries removed\033[0m"
+
+re          : fclean all
+
+bin         : all clean
+
+.PHONY : all clean fclean mclean re bin 

@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 15:50:37 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/09 16:44:03 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/10 15:52:37 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 using namespace std;
 
 class YtClass {
+   private:
+    int number = 31 + 11;
+
    public:
     string Name;
     string OwnerName;
@@ -27,14 +30,16 @@ class YtClass {
 
     void SetChannel(string name, string ownername);
     void getInfo();
+    void subscribe();
     YtClass();
     YtClass(string name, string ownername);
+    void publishVideo(string name);
+    int getNumber();
 };
 
 class CookingCh : public YtClass {
    public:
-    CookingCh(string name, string surname)
-        : YtClass(name, surname) {}
+    CookingCh(string name, string surname) : YtClass(name, surname) {}
     CookingCh() : YtClass() {}
 };
 

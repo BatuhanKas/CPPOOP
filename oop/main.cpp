@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 15:59:30 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/09 16:49:12 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/10 15:52:22 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,11 @@ int main() {
     // yt2.SetChannel("ali", "veli");
     yt2.getInfo();
     yt3.getInfo();
+    cout << "the num is: " << yt3.getNumber() << endl << endl;
+
+    CookingCh yc("mutfak", "robotu");
+    yc.publishVideo("yumurta");
+    yc.publishVideo("menenb");
+    yc.subscribe();
+    yc.getInfo();
 }
