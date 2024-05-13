@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 16:06:33 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/13 14:58:54 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/13 15:52:01 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ using namespace std;
 class Array {
    private:
     int *data, size, capacity;
-    int findIndex(int number, int b = 0);
+    // int findIndex(int number, int b = 0);
 
    public:
     Array(int user_capacity = 5);

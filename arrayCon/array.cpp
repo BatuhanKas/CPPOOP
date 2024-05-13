@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 16:10:15 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/13 14:58:56 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/13 15:50:20 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void Array::AddItem(int number) {
 }
 
 void Array::printItems() {
-    for (int i = 0; data[i]; i++) {
+    for (int i = 0; i < size; i++) {
         cout << "data[" << i << "]: " << data[i] << " " << endl << endl;
     }
 }
@@ -87,7 +87,7 @@ void Array::findElement(int number, int b) {
 
 void Array::removeIndexItem(int index) {
     if (index < 0 || index >= size) {
-        cout << "False index!" << endl;
+        cout << "--False index ! --" << endl;
         return;
     }
     int a = index;
@@ -97,4 +97,40 @@ void Array::removeIndexItem(int index) {
     }
     cout << "--data[" << a << "]: " << b << " is deleted.--" << endl << endl;
     size--;
+}
+
+void Array::removeItem(int number) {
+    int sizeRemove = 0;
+    int j = 0;
+    bool flag = false;
+    for (int i = 0; data[i]; i++) {
+        if (data[i] == number) {
+            j = i;
+            while (data[i + 1] == number) i++;
+            data[j] = data[i + 1];
+            sizeRemove++;
+            flag = true;
+            i -= 1; 
+        }
+    }
+    while (sizeRemove) {
+        size--;
+        sizeRemove--;
+    }
+
+    // int counter = 0;
+
+    // for (int i = 0; i <= size; i++) {
+    //     if(data[i] == number) {
+    //         for (int j = 0; j < size; j++) {
+    //             data[j] = data[j+1];
+    //         }
+    //         counter++;
+    //         flag = true;
+    //     }
+    // }
+    if (flag) cout << "--Number " << number << " is Removed!--" << endl;
+    // size -= counter;
+
+    return;
 }

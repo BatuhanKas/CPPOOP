@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 18:23:44 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/13 14:59:18 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/13 15:51:05 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,17 +45,25 @@ int main() {
     cout << "third arr:" << endl;
     thirdArr.printItems();
     thirdArr.AddItem(4);
-    thirdArr.AddItem(5);
+    thirdArr.AddItem(3);
     cout << "added third arr:" << endl;
     thirdArr.printItems();
     cout << "Capapacity: " << thirdArr.getCapacity() << endl;
     cout << "Size: " << thirdArr.getSize() << endl << endl;
 
-    cout << "deleted third arr:" << endl;
-    thirdArr.removeIndexItem(1);
+    // cout << "deleted third arr:" << endl;
+    // thirdArr.removeIndexItem(2);
+    // thirdArr.printItems();
+    // cout << "Capapacity: " << thirdArr.getCapacity() << endl;
+    // cout << "Size: " << thirdArr.getSize() << endl << endl;
+
+    
+    thirdArr.removeItem(3);
     thirdArr.printItems();
     cout << "Capapacity: " << thirdArr.getCapacity() << endl;
     cout << "Size: " << thirdArr.getSize() << endl << endl;
+
+    thirdArr.findElement(4);
 
     // mainArr.findElement(4, 0);
     // mainArr.findElement(0, 0);
