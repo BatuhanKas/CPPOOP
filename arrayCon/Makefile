@@ -6,13 +6,13 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/05/10 16:58:46 by bkas             ###   ########.fr        #
+#    Updated: 2024/05/10 18:25:43 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME        = array
 
-SRC         = array.cpp
+SRC         = array.cpp main.cpp
 
 SRCDIR      = ./
 
