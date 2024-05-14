@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 16:16:04 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/14 13:29:42 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/14 15:15:42 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ void Date::displayDate() {
 
 void Date::increaseDay() {
     int flag = day == 28 && month == 2 && year % 4 == 0;
+    int flag2 = day == 31 && month == 12;
 
     // cout << "flag" << flag << "year" << year % 4 << endl;
     if (flag) {
@@ -98,7 +99,7 @@ void Date::increaseDay() {
         day++;
     } else {
         day = 1;
-        month++;
+        flag2 ? month = 1 : month++;
     }
 }
 
