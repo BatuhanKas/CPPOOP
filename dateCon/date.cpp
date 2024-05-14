@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 16:16:04 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/14 15:15:42 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/14 16:21:15 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,16 +95,24 @@ void Date::increaseDay() {
         day++;
     } else if (day < monthDays[month - 1]) {
         if (day == 28 && month == 2) return;
-        cout << "val:" << monthDays[month - 1] << endl;
+        // cout << "val:" << monthDays[month - 1] << endl;
         day++;
     } else {
         day = 1;
-        flag2 ? month = 1 : month++;
+        flag2 ? month = 1 && year++ : month++;
     }
 }
 
 void Date::compareDate(const Date &oth) {
-    day == oth.day &&month == oth.month &&year == oth.year
-        ? cout << "Compared True" << endl
-        : cout << "False Compare!" << endl;
+    long firstTotal = year * 365 + month * 30 + day;
+    long othTotal = oth.year * 365 + oth.month * 30 + oth.day;
+
+    firstTotal > othTotal
+        ? cout << "First total Greater" << endl
+        : (firstTotal < othTotal ? cout << "Second Total is greater" << endl
+                                 : cout << "Equal" << endl);
+
+    // day == oth.day &&month == oth.month &&year == oth.year
+    //     ? cout << "Compared True" << endl
+    //     : cout << "False Compare!" << endl;
 }
