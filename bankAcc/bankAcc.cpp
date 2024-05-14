@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 16:57:06 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/14 17:03:52 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/14 17:10:02 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,13 @@ void bankAcc::setPersonSurname(string surname) { personSurname = surname; }
 void bankAcc::setPersonPhone(int phoneNum) { personPhone = phoneNum; }
 
 void bankAcc::setPersonBalance(float balance) { accountBalance = balance; }
+
+string bankAcc::getPersonName() const { return personName; }
+
+string bankAcc::getPersonSurname() const { return personSurname; }
+
+int bankAcc::getPersonPhone() const { return personPhone; }
+
+int bankAcc::getPersonBalance() const { return accountBalance; }
 
 bankAcc::~bankAcc() {}
