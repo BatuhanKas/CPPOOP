@@ -6,23 +6,23 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 16:04:21 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/13 16:52:57 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/14 12:41:03 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DATE_HPP
 #define DATE_HPP
 
+#include <array>
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Date {
    private:
     int year, month, day;
-    const int monthDays[12] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    const string monthString[12] = {
-        "January", "February", "March",     "April",   "May",      "June",
-        "July",    "August",   "September", "October", "November", "December"};
+    static const array<int, 12> monthDays;
+    static const array<string, 12> monthString;
 
    public:
     Date(int d = 1, int m = 1, int y = 1900);

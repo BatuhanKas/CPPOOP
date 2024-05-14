@@ -6,7 +6,7 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/05/13 16:15:07 by bkas             ###   ########.fr        #
+#    Updated: 2024/05/14 11:57:15 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJ         = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(BASE)))
 
 BASE        = $(basename $(notdir $(SRC)))
 
-CC          = c++ -Wall -Wextra -Werror
+CC          = c++ -Wall -Wextra -Werror 
 
 CFLAGS      = -g
 
@@ -34,7 +34,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@$(ECHO) "\033[0;32m> Array Project Compiled\033[0m"
+	@$(ECHO) "\033[0;32m> Date Project Compiled\033[0m"
 
 $(OBJDIR):
 	@test -d $(OBJDIR) || mkdir $(OBJDIR)
@@ -46,11 +46,11 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp | $(OBJDIR)
 
 clean:
 	@$(RM) -r $(OBJDIR)
-	@$(ECHO) "\033[0;34m> Array Directory cleaned\033[0m"
+	@$(ECHO) "\033[0;34m> Date Directory cleaned\033[0m"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@$(ECHO) "\033[0;35m> Array Binaries removed\033[0m"
+	@$(ECHO) "\033[0;35m> Date Binaries removed\033[0m"
 
 re: fclean all
 
