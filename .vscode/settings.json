@@ -6,7 +6,10 @@
         "iomanip": "cpp",
         "string": "cpp",
         "list": "cpp",
-        "array": "cpp"
+        "array": "cpp",
+        "__locale": "cpp",
+        "stdexcept": "cpp",
+        "istream": "cpp"
     },
     "editor.formatOnSave": true,
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }"
