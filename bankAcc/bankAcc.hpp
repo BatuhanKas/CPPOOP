@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 16:44:13 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/14 17:09:34 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/16 12:12:38 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ class bankAcc {
     int personPhone;
 
    public:
-    bankAcc(string name, string surname, float balance = 0, int phoneNum = 0);
+    bankAcc(string name, string surname, float balance = 0, long int phoneNum = 0);
     bankAcc(const bankAcc &oth);
     ~bankAcc();
-    bool controlNameSurname(string nameOrSurname);
-    bool controlPhoneNumber(int phoneNum);
+    bool controlNameSurname(string name);
+    bool controlPhoneNumber(int num);
     void displayProfile();
-    void credit(float);
-    void withdraw(float);
+    void credit(float balance);
+    void withdraw(float balance);
     void sendMoney(bankAcc &oth, float amount);
     void setPersonName(string name);
     void setPersonSurname(string surname);
