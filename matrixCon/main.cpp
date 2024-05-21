@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 12:33:24 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/21 14:51:59 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/21 14:54:18 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int main() {
     Matrix m1(row, col);
     // m1.setVal(5, 1, 5);
     // m1.display();
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < col; j++) {
-            m1.setVal(i, j, i * j + 1);
+    for (int i = 1; i <= row; i++) {
+        for (int j = 1; j <= col; j++) {
+            m1.setVal(i, j, i * j);
         }
     }
     m1.display();

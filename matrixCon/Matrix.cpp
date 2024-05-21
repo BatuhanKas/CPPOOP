@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:35:50 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/21 14:41:11 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/21 14:54:41 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,6 @@ Matrix::Matrix(const Matrix &oth) {
 
 void Matrix::setVal(int r, int c, int val) {
     matrix[r - 1][c - 1] = val;
-    cout << "------Val Set.------" << endl;
 }
 
 void Matrix::display() {
