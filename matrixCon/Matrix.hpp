@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:29:32 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/21 14:17:20 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/21 18:12:45 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include <iostream>
+#include <algorithm>
 #include <iomanip>
+#include <iostream>
+#include <random>
 
 using namespace std;
 
@@ -36,7 +38,8 @@ class Matrix {
     void randomSet();
     void identityMatrixSet();
     void display();
-    void addMatrix(Matrix &oth);
+    Matrix addMatrix(const Matrix &oth);
+    void setRow(int row2) { row = row2; };
 };
 
 #endif

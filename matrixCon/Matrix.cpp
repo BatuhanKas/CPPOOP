@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:35:50 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/21 14:54:41 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/21 17:50:27 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,27 @@ Matrix::Matrix(const Matrix &oth) {
     cout << "------Copy Const------" << endl;
 }
 
-void Matrix::setVal(int r, int c, int val) {
-    matrix[r - 1][c - 1] = val;
+void Matrix::randomSet() {
+    // srand(time(NULL));
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> dis(0, 9);
+    for (int i = 1; i <= row; i++) {
+        for (int j = 1; j <= col; j++) {
+            setVal(i, j, dis(gen));
+        }
+    }
 }
+
+void Matrix::identityMatrixSet() {
+    for (int i = 1; i <= row; i++) {
+        for (int j = 1; j <= col; j++) {
+            i == j ? setVal(i, j, 1) : setVal(i, j, 0);
+        }
+    }
+}
+
+void Matrix::setVal(int r, int c, int val) { matrix[r - 1][c - 1] = val; }
 
 void Matrix::display() {
     cout << "Matrix" << endl;
@@ -90,6 +108,30 @@ void Matrix::display() {
             cout << setw(3) << matrix[i][j];
         }
         cout << endl;
+    }
+}
+/**
+ * @brief Sum of the 2 of matrixes;
+ *
+ * 1 2 3   4 3 2   5  5 5
+ * 4 5 6 + 3 6 1 = 7 11 7
+ * 3 1 0   5 3 1   8  4 4
+ *
+ * @param oth
+ */
+Matrix Matrix::addMatrix(const Matrix &oth) {
+    if (row != oth.row || col != oth.col) {
+        cout << "False Row or Column!" << endl;
+        return 0;
+    } else {
+        Matrix sumMatrix(row, col);
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                sumMatrix.matrix[i][j] = matrix[i][j] + oth.matrix[i][j];
+            }
+        }
+        cout << "---Addition Succesfull!---" << endl;
+        return sumMatrix;
     }
 }
 

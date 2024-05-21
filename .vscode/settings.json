@@ -9,7 +9,10 @@
         "array": "cpp",
         "__locale": "cpp",
         "stdexcept": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "new": "cpp",
+        "random": "cpp",
+        "algorithm": "cpp"
     },
     "editor.formatOnSave": true,
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }"
