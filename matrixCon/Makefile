@@ -6,13 +6,13 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/05/21 11:28:13 by bkas             ###   ########.fr        #
+#    Updated: 2024/05/21 13:32:04 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME        = bankAcc
+NAME        = matrix
 
-SRC         = bankAcc.cpp main.cpp
+SRC         = Matrix.cpp main.cpp
 
 SRCDIR      = ./
 
@@ -45,8 +45,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@progress_bar
-	@$(ECHO) "\033[0;32m> Array Project Compiled\033[0m"
+	@$(ECHO) "\033[0;32m> Matrix Project Compiled\033[0m"
 
 $(OBJDIR):
 	@test -d $(OBJDIR) || mkdir $(OBJDIR)
@@ -58,11 +57,11 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp | $(OBJDIR)
 
 clean:
 	@$(RM) -r $(OBJDIR)
-	@$(ECHO) "\033[0;34m> Bank Account Directory cleaned\033[0m"
+	@$(ECHO) "\033[0;34m> Matrix Directory cleaned\033[0m"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@$(ECHO) "\033[0;35m> Bank Account Binaries removed\033[0m"
+	@$(ECHO) "\033[0;35m> Matrix Binaries removed\033[0m"
 
 re: fclean all
 
