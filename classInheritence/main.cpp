@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 11:07:10 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/22 11:21:25 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/22 13:44:01 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,19 @@ int main() {
 
     baseClass c1;
 
-    c1.setval(5);
-    ret = c1.getint();
-    cout << ret << endl << endl;
+    // c1.setval(5);
+    // ret = c1.getint();
+    // cout << ret << endl << endl;
 
-    c1.setx(10);
-    ret = c1.getx();
-    cout << ret << endl << endl;
-
-    c1.printx(); 
+    // c1.setx(10);
+    // c1.printx();
+    // ret = c1.getx();
+    // cout << ret << endl << endl;
 
     derivedClass d1;
-    d1.setx(20);
-    d1.printx();
+    d1.ds(20);
+    // d1.printx();
+
+    // d1.sety(30);
+    // d1.printy();
 }

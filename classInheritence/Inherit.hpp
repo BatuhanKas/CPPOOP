@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 10:27:18 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/22 11:28:27 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/22 13:44:37 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,32 @@
 using namespace std;
 
 class baseClass {
+   public:
+    int a;
+
    protected:
     int x;
-
-   public:
-    int asd;
-    int getint() { return asd; };
     int getx() { return x; };
-    void setval(int n) { asd = n; };
     void setx(int v) { x = v; };
-    void printx() { cout << "x: " << x << endl; };
+    void printx() {
+        cout << "x: " << x << endl;
+        cout << "----" << endl;
+    };
 };
 
-class derivedClass : public baseClass {};
+class derivedClass : protected baseClass {
+   public:
+    int y;
+    void sety(int x) { y = x; };
+    int gety() { return y; };
+    void ds(int num) {
+        setx(num);
+        printx();
+    };
+    void printy() {
+        cout << "y: " << y << endl;
+        cout << "----" << endl;
+    };
+};
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:35:50 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/21 17:50:27 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/22 13:05:09 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,8 @@ Matrix::~Matrix() {
     free(matrix);
      */
 
-    for (int i = 0; i < row; i++) delete[] matrix[i];
+    for (int i = 0; i < row; i++)
+        delete[] matrix[i];
     delete[] matrix;
     cout << "-----Destr------" << endl;
 }
