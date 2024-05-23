@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 22:52:26 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 00:38:07 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/24 01:21:23 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Person {
     string personName, personSurname;
 
    public:
+    int arrSize;
     Person(string name = "", string surname = "");
     string getPersonName() const;
     string getPersonSurname() const;
@@ -60,8 +61,8 @@ class Teacher : public Person {
     string getDepartment() const;
     void setDepartment(string dep);
     void display();
-    void passFailStatus(Student *studentArray);
-    void printStudentInformation(Student *studentArray);
+    void passFailStatus(Student *studentArr);
+    void printStudentInformation(Student *studentArr);
 };
 
 int ft_rand(int min, int max);

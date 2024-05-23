@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 23:14:47 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 00:46:50 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/24 01:28:13 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Student::Student(){};
 Student::Student(string name, string surname, int id) : Person(name, surname) {
     // Person(name, surname);
     setStudentID(id);
-    passOrFail = true;
+    // passOrFail = true;
     cout << "Student Const Worked" << endl;
     cout << "-------------------" << endl;
 }
@@ -69,9 +69,6 @@ void Student::display() {
     Person::display();
     cout << "Student ID: " << studentID << endl;
     cout << "Student Grade: " << studentGrade << endl;
-    cout << "Student Passed or Failed?: " << endl;
-    passOrFail == true ? cout << "-PASSED-" << endl
-                       : cout << "-FAILED-" << endl;
 }
 
 /**
@@ -79,13 +76,40 @@ void Student::display() {
  */
 
 Teacher::Teacher(string name, string surname, string dep) {
-    setPersonName(name);
-    setPersonSurname(surname);
+    Person(name, surname);
+    setDepartment(dep);
+    cout << "Teacher Const Worked" << endl;
+    cout << "-------------------" << endl;
 }
 
 void Teacher::setDepartment(string dep) { department = dep; };
 
 string Teacher::getDepartment() const { return department; }
+
+void Teacher::display() {
+    Person::display();
+    cout << "Department: " << department << endl;
+}
+
+void Teacher::passFailStatus(Student *studentArr) {
+    // arrSize cpp notlarimda
+    int arrSize = sizeof(studentArr) / sizeof(studentArr[0]);
+    // cout << "ARRSIZE" << arrSize << endl;
+    for (int i = 0; i < arrSize; i++) {
+        studentArr[i].getStudentGrade() >= 50
+            ? studentArr[i].setPassOrFail(true)
+            : studentArr[i].setPassOrFail(false);
+    }
+}
+
+void Teacher::printStudentInformation(Student *studentArr) {
+    for (int i = 0; i < arrSize; i++) {
+        studentArr[i].display();
+        cout << "Student Passed or Failed?: " << endl;
+        studentArr[i].getPassOrFail() == true ? cout << "-PASSED-" << endl
+                                              : cout << "-FAILED-" << endl;
+    }
+}
 
 /**
  * @brief Random Number Generator
