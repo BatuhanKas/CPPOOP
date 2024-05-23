@@ -5,37 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/22 11:07:10 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/23 22:45:39 by bkas             ###   ########.fr       */
+/*   Created: 2024/05/23 23:14:42 by bkas              #+#    #+#             */
+/*   Updated: 2024/05/24 00:43:37 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Inherit.hpp"
+#include "Person.hpp"
 
 int main() {
-    // int ret;
+    Student studentArr[] = {{"Batuhan", "Kas", 789},
+                            {"Mehmet", "Ali", 123},
+                            {"Mauro", "Icardi", 9}};
 
-    baseClass c1;
-    c1.setx(10);
-    c1.printx();
-    derivedClass d1(3, 5);
-    d1.printx();
-
-    // derivedClass d2(d1);
-
-    // c1.setval(5);
-    // ret = c1.getint();
-    // cout << ret << endl << endl;
-
-    // c1.setx(10);
-    // c1.printx();
-    // ret = c1.getx();
-    // cout << ret << endl << endl;
-
-    // derivedClass d1;
-    // d1.ds(20);
-    // d1.printx();
-
-    // d1.sety(30);
-    // d1.printy();
+    for (int i = 0; i < 3; i++) {
+        studentArr[i].setStudentGrade(ft_rand(0, 100));
+        studentArr[i].display();
+    }
 }
