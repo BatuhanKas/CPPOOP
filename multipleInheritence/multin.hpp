@@ -1,44 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Inherit.hpp                                        :+:      :+:    :+:   */
+/*   multin.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/22 10:27:18 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/23 13:39:32 by bkas             ###   ########.fr       */
+/*   Created: 2024/05/23 10:31:57 by bkas              #+#    #+#             */
+/*   Updated: 2024/05/23 12:10:25 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INHERIT_HPP
-#define INHERIT_HPP
+#ifndef MULTIN_HPP
+#define MULTIN_HPP
 
 #include <iostream>
 using namespace std;
 
-class baseClass {
+class AClass {
    public:
-    int x;
-    int getx();
-    void setx(int v);
-    void printx();
-    baseClass(int mainx = 0);
-    ~baseClass();
-    baseClass(baseClass &oth);
+    int a;
+    AClass();
+    ~AClass();
 };
 
-class derivedClass : public baseClass {
+class BClass {
    public:
-    int y;
-    void setx(int a);
-    void sety(int x);
-    int gety();
-    void ds(int num);
-    void printx();
-    void printy();
-    derivedClass(int mainx = 0, int mainy = 0);
-    ~derivedClass();
-    derivedClass(derivedClass &oth);
+    int b;
+    BClass();
+    ~BClass();
+};
+
+/**
+ * @brief Class Coklu Miras alma
+ *
+ * her ikisinide ayri ayri protected miras aldigim icin
+ * sadece Class icerisinde ve miras alan class'larda kullanabilirim.
+};
+*/
+
+class CClass : protected AClass, protected BClass {
+   public:
+    CClass();
+    ~CClass();
 };
 
 #endif

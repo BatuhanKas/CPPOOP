@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:35:50 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/22 13:05:09 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/23 10:10:15 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,7 @@ Matrix::~Matrix() {
     free(matrix);
      */
 
-    for (int i = 0; i < row; i++)
-        delete[] matrix[i];
+    for (int i = 0; i < row; i++) delete[] matrix[i];
     delete[] matrix;
     cout << "-----Destr------" << endl;
 }
@@ -80,14 +79,34 @@ Matrix::Matrix(const Matrix &oth) {
     cout << "------Copy Const------" << endl;
 }
 
+int ft_rand(int min, int max) {
+    static unsigned long address;
+    static int seed;
+    char pointer[8192];
+    t_cast cast;
+
+    seed = seed + 0;
+    if (!seed) {
+        cast.ptr = &pointer[seed];
+        address =
+            cast.integer +
+            ((unsigned long long)__TIME__[0] * (unsigned long long)__TIME__[1] +
+             (unsigned long long)__TIME__[3] * (unsigned long long)__TIME__[4] +
+             (unsigned long long)__TIME__[6]) *
+                (unsigned long long)__TIME__[7];
+    }
+    address = (++seed, (address * 1103515245ULL + 12345ULL) & 0X7FFFFFFF);
+    return (min + (int)((double)address / (0X7FFFFFFF / (max - min + 1))));
+}
+
 void Matrix::randomSet() {
     // srand(time(NULL));
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_int_distribution<> dis(0, 9);
+    // random_device rd;
+    // mt19937 gen(rd());
+    // uniform_int_distribution<> dis(0, 9);
     for (int i = 1; i <= row; i++) {
         for (int j = 1; j <= col; j++) {
-            setVal(i, j, dis(gen));
+            setVal(i, j, ft_rand(0, 9));
         }
     }
 }

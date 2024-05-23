@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:29:32 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/21 18:15:57 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/22 17:39:11 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@
 #include <random>
 
 using namespace std;
+
+typedef union s_cast
+{
+	const char			*ptr;
+	unsigned long long	integer;
+}	t_cast;
 
 class Matrix {
    private:

@@ -6,7 +6,7 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 10:59:58 by bkas              #+#    #+#              #
-#    Updated: 2024/05/22 14:36:26 by bkas             ###   ########.fr        #
+#    Updated: 2024/05/23 10:36:47 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = asd
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror
-SRCS = main.cpp Inherit.cpp
+SRCS = main.cpp multin.cpp
 
 RM = rm -rf
 
