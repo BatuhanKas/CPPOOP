@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 23:14:47 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 12:27:41 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/24 14:40:08 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,3 +144,4 @@ void Teacher::printStudentInformation(Student *studentArr, int arrSize) {
             : cout << "===Status: -FAILED-===" << endl;
     }
 }
+

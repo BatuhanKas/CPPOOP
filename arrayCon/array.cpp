@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 16:10:15 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 12:38:00 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/24 16:09:03 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,3 +134,115 @@ void Array::removeItem(int number) {
 
     return;
 }
+
+/**
+ * @brief unsorted Arr
+ * Functions Down Below
+ */
+
+unsortedArr::unsortedArr(int user_capacity) : Array(user_capacity) {}
+
+unsortedArr::unsortedArr(unsortedArr &oth) : Array(oth) {}
+
+void unsortedArr::printItems() {
+    cout << "Unsorted Array" << endl;
+    Array::printItems();
+}
+
+/**
+ * @brief sorted Arr
+ * Functions Down Below
+ */
+
+sortedArr::sortedArr(int user_capacity) : Array(user_capacity) {}
+
+sortedArr::sortedArr(sortedArr &oth) : Array(oth) {}
+
+void sortedArr::printItems() { Array::printItems(); }
+
+/**
+ * @brief addItem override yapacagiz
+ * Cunku numarayi nereye ekleyecegimi bulup
+ * o araliktaki indexe eklememiz gerekiyor.
+ *
+ * @param number
+ */
+
+/**
+ * @brief
+ *
+ * @param number
+void sortedArr::addItem(int number) {
+    int i = 0;
+    int flag = 1;
+    if (size < capacity) {
+        int *tmp = new int[capacity];
+        for (size_t i = 0; data[i]; i++) tmp[i] = data[i];
+        delete[] data;
+        data = new int[capacity];
+        while (tmp[i]) {
+            if (tmp[i] < number && tmp[i + 1] > number && flag) {
+                data[i] = number;
+                size++;
+                flag = 0;
+            } else {
+                data[i] = tmp[i];
+            }
+            i++;
+        }
+        delete[] tmp;
+    } else {
+        capacity *= 2;
+        int *tmp = new int[capacity];
+        for (size_t i = 0; data[i]; i++) tmp[i] = data[i];
+        delete[] data;
+        data = new int[capacity];
+        while (tmp[i]) {
+            if (tmp[i] < number && tmp[i + 1] > number && flag) {
+                data[i] = number;
+                size++;
+                flag = 0;
+            } else {
+                data[i] = tmp[i];
+            }
+            i++;
+        }
+        delete[] tmp;
+    }
+}
+ */
+
+void sortedArr::addItem(int number) {
+    int i = 0;
+    int flag = 1;
+    if (size < capacity) {
+        int *tmp = new int[capacity];
+        cout << "data[" << i << "]: " << data[i] << endl;
+        while (data[i]) {
+            if (data[i] < number && data[i + 1] > number && flag) {
+                tmp[i] = number;
+                cout << "data[" << i << "]: " << tmp[i] << endl;
+                flag = 0;
+            } else {
+                tmp[i] = data[i];
+                cout << "data[" << i << "]: " << tmp[i] << endl;
+            }
+            i++;
+        }
+        if (!data[i]) {
+            data[i] = number;
+        }
+        delete[] data;
+        size++;
+        data = tmp;
+        // for (int i = 0; i < size; i++)
+        // {
+        //     cout << "data[" << i << "]: " << data[i] << endl;
+        //     cout << "------------" << endl;
+        // }
+    }
+}
+
+// 1 2 3 4 5
+
+// 3
