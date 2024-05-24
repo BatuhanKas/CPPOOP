@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 22:52:26 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 11:33:38 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/24 12:19:33 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ class Teacher : public Person {
     void setDepartment(string dep);
     void display();
     void passFailStatus(Student *studentArr, int arrSize);
-    void printStudentInformation(Student *studentArr);
+    void printStudentInformation(Student *studentArr, int arrSize);
 };
 
 int ft_rand(int min, int max);

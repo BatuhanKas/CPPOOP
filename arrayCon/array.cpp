@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 16:10:15 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/13 15:50:20 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/24 12:38:00 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ void Array::removeItem(int number) {
             data[j] = data[i + 1];
             sizeRemove++;
             flag = true;
-            i -= 1; 
+            i -= 1;
         }
     }
     while (sizeRemove) {

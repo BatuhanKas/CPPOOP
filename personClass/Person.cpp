@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 23:14:47 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 11:40:33 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/24 12:27:41 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,6 @@ void Teacher::display() {
 
 void Teacher::passFailStatus(Student *studentArr, int arrSize) {
     // arrSize cpp notlarimda
-    // cout << "ARRSIZE: " << arrSize << endl;
     float average = 0;
     for (size_t i = 0; i < arrSize; i++)
         average += studentArr[i].getStudentGrade();
@@ -136,11 +135,12 @@ void Teacher::passFailStatus(Student *studentArr, int arrSize) {
             : studentArr[i].setPassOrFail(true);
 }
 
-void Teacher::printStudentInformation(Student *studentArr) {
-    for (int i = 0; i < 3; i++) {
+void Teacher::printStudentInformation(Student *studentArr, int arrSize) {
+    for (int i = 0; i < arrSize; i++) {
         studentArr[i].display();
         cout << "Student Passed or Failed?: " << endl;
-        studentArr[i].getPassOrFail() == true ? cout << "-PASSED-" << endl
-                                              : cout << "-FAILED-" << endl;
+        studentArr[i].getPassOrFail() == true
+            ? cout << "===Status: -PASSED-===" << endl
+            : cout << "===Status: -FAILED-===" << endl;
     }
 }
