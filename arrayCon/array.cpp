@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 16:10:15 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 16:09:20 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/24 18:13:16 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,7 +158,10 @@ sortedArr::sortedArr(int user_capacity) : Array(user_capacity) {}
 
 sortedArr::sortedArr(sortedArr &oth) : Array(oth) {}
 
-void sortedArr::printItems() { Array::printItems(); }
+void sortedArr::printItems() {
+    cout << "Sorted Array: ";
+    Array::printItems();
+}
 
 /**
  * @brief addItem override yapacagiz
@@ -169,7 +172,7 @@ void sortedArr::printItems() { Array::printItems(); }
  */
 
 /**
- * @brief
+ * @brief YAPAMADIM ANASINI SATAYIM KAFAYI YEDIM BURADA AKSAM BAKICAM
  *
  * @param number
 void sortedArr::addItem(int number) {
@@ -214,35 +217,20 @@ void sortedArr::addItem(int number) {
 
 void sortedArr::addItem(int number) {
     int i = 0;
-    int flag = 1;
-    if (size < capacity) {
+    if (size >= capacity) {
+        capacity *= 2;
         int *tmp = new int[capacity];
-        cout << "data[" << i << "]: " << data[i] << endl;
-        while (data[i]) {
-            if (data[i] < number && data[i + 1] > number && flag) {
-                tmp[i] = number;
-                cout << "data[" << i << "]: " << tmp[i] << endl;
-                flag = 0;
-            } else {
-                tmp[i] = data[i];
-                cout << "data[" << i << "]: " << tmp[i] << endl;
-            }
-            i++;
-        }
-        if (!data[i]) {
-            data[i] = number;
-        }
+        for (int i = 0; i < size; i++) tmp[i] = data[i];
         delete[] data;
-        size++;
         data = tmp;
-        // for (int i = 0; i < size; i++)
-        // {
-        //     cout << "data[" << i << "]: " << data[i] << endl;
-        //     cout << "------------" << endl;
-        // }
     }
+    for (i = size - 1; i >= 0 && data[i] > number; i++) {
+        data[i + 1] = data[i];
+    }
+    data[i + 1] = number;
+    size++;
 }
 
-// 1 2 3 4 5
+// 1 2 4 5
 
 // 3

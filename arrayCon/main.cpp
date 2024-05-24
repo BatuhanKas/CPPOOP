@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 18:23:44 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 16:00:20 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/24 18:16:11 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,26 @@ int main() {
     // mainArr.AddItem(6);
     // mainArr.AddItem(7);
 
-
     // cout << "Capapacity: " << mainArr.getCapacity() << endl;
     // cout << "Size: " << mainArr.getSize() << endl << endl;
-    
-    sortedArr s1;
-    s1.addItem(1);
-    s1.addItem(2);
-    s1.addItem(3);
+
+    unsortedArr u1(10);
+    sortedArr s1(10);
+    u1.AddItem(10);
+    u1.AddItem(8);
+    u1.AddItem(12);
+    u1.AddItem(7);
+    u1.AddItem(150);
+    u1.AddItem(5);
+    u1.printItems();
+
+    s1.AddItem(10);
+    s1.AddItem(8);
+    s1.AddItem(12);
+    s1.AddItem(7);
+    s1.AddItem(150);
+    s1.AddItem(5);
+    s1.printItems();
     // s1.addItem(3);
     // s1.addItem(4);
     // s1.printItems();
