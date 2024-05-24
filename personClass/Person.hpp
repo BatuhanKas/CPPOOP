@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 22:52:26 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 01:21:23 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/24 11:33:38 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ class Person {
     string personName, personSurname;
 
    public:
-    int arrSize;
     Person(string name = "", string surname = "");
     string getPersonName() const;
     string getPersonSurname() const;
@@ -48,7 +47,7 @@ class Student : public Person {
     int getStudentGrade() const;
     void setStudentGrade(int grade);
     int getPassOrFail() const;
-    void setPassOrFail(int x);
+    void setPassOrFail(bool x);
     void display();
 };
 
@@ -61,7 +60,7 @@ class Teacher : public Person {
     string getDepartment() const;
     void setDepartment(string dep);
     void display();
-    void passFailStatus(Student *studentArr);
+    void passFailStatus(Student *studentArr, int arrSize);
     void printStudentInformation(Student *studentArr);
 };
 
