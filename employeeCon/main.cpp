@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 12:21:15 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/27 13:35:02 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/27 13:36:52 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ int main() {
         Employee("Maksut", "Bigman", "Philedelphia", "Cleaner", 1000, 0)};
 
     Manager m1("Cody", "Rhodes", "Colorado", "Manager", 5000, 5);
-
+    
     int size = sizeof(arr) / sizeof(arr[0]);
 
     m1.extractEmployees(arr, size);
+
+    m1.display();
 }
