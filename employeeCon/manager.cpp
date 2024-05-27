@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 12:02:33 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/27 13:34:32 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/27 17:31:54 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ Manager::Manager(string name, string surname, string dep, string pos,
 
 void Manager::display() {
     Person::display();
-    cout << "Manager Bonus: " << managerBonus << endl;
-    cout << "Manager Final Salary : "
+    cout << "\033[1;37mManager Bonus: \033[0m" << managerBonus << endl;
+    cout << "\033[1;37mManager Final Salary: \033[0m"
          << getSalary() + (getYear() * managerBonus) << endl;
     cout << "---------------------------------" << endl;
 }
