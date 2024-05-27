@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 16:06:33 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 15:14:53 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/27 10:47:16 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ class sortedArr : public Array {
    public:
     sortedArr(int user_capacity = 5);
     sortedArr(sortedArr &oth);
-    void addItem(int number);
+    void AddItem(int number);
     void printItems();
 };

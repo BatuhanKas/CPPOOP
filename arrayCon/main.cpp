@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 18:23:44 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 18:16:11 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/27 11:10:34 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,20 @@ int main() {
     u1.AddItem(7);
     u1.AddItem(150);
     u1.AddItem(5);
+    u1.removeIndexItem(0);
+    u1.removeItem(150);
+    u1.findElement(10);
     u1.printItems();
-
+    //-----------------------------------------------
     s1.AddItem(10);
     s1.AddItem(8);
     s1.AddItem(12);
     s1.AddItem(7);
     s1.AddItem(150);
     s1.AddItem(5);
+    s1.removeIndexItem(0);
+    s1.removeItem(150);
+    s1.findElement(10);
     s1.printItems();
     // s1.addItem(3);
     // s1.addItem(4);

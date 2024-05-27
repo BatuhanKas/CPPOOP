@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 16:10:15 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/24 18:13:16 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/27 11:14:52 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ void Array::printItems() {
     for (int i = 0; i < size; i++) {
         cout << "data[" << i << "]: " << data[i] << " " << endl << endl;
     }
+    cout << "------------------" << endl;
 }
 
 void Array::findElement(int number, int b) {
@@ -159,7 +160,7 @@ sortedArr::sortedArr(int user_capacity) : Array(user_capacity) {}
 sortedArr::sortedArr(sortedArr &oth) : Array(oth) {}
 
 void sortedArr::printItems() {
-    cout << "Sorted Array: ";
+    cout << "Sorted Array: " << endl;
     Array::printItems();
 }
 
@@ -215,7 +216,7 @@ void sortedArr::addItem(int number) {
 }
  */
 
-void sortedArr::addItem(int number) {
+void sortedArr::AddItem(int number) {
     int i = 0;
     if (size >= capacity) {
         capacity *= 2;
@@ -224,13 +225,23 @@ void sortedArr::addItem(int number) {
         delete[] data;
         data = tmp;
     }
-    for (i = size - 1; i >= 0 && data[i] > number; i++) {
+    for (i = size - 1; (i >= 0 && data[i] > number); i--) {
         data[i + 1] = data[i];
     }
     data[i + 1] = number;
     size++;
 }
 
-// 1 2 4 5
+/**
+ * @brief i've explained the algorithm down below
+ * how to sorting the numbers.
+ *
+
+// 1 2 3 [4] [5] [6] [7]
+
+// index = 5 - 1 = 4, 4 - 1 = 3, 3 - 1 = 2, 2 - 1 = 1
+// 5 > 3 ? true.
+// ana uzunluk = 6
 
 // 3
+ */
