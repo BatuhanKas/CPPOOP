@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 22:32:01 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/27 22:51:32 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/27 23:10:26 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main() {
 
     /**
      * @brief im gonna try something
-     * 
+     *
     for (size_t i = 0; i < 5; i++) {
         delete[] arr1[i];
     }
