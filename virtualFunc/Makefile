@@ -6,15 +6,15 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/06/04 12:24:31 by bkas             ###   ########.fr        #
+#    Updated: 2024/06/04 14:44:44 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME        = upcasting
+NAME        = virtual
 
-PROJECTNAME = Upcasting
+PROJECTNAME = virtual
 
-SRC         = main.cpp upcasting.cpp
+SRC         = main.cpp virtual.cpp
 
 SRCDIR      = ./
 

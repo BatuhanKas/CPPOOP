@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   upcasting.hpp                                      :+:      :+:    :+:   */
+/*   virtual.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 20:23:46 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/04 14:40:10 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/04 14:43:34 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UPCASTING_HPP
-#define UPCASTING_HPP
+#ifndef VIRTUAL_HPP
+#define VIRTUAL_HPP
 
 #include <iostream>
 using namespace std;
