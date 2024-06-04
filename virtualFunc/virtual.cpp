@@ -6,11 +6,15 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 20:46:46 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/04 14:43:51 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/04 15:52:59 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "virtual.hpp"
+
+Employee::~Employee() { cout << "Emp Dest Workd" << endl; };
+
+Manager::~Manager() { cout << "Mng Dest Workd" << endl; };
 
 void df1(Employee &oth) { oth.display(); }
 

@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 20:23:46 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/04 14:43:34 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/04 16:02:48 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Employee {
     string empName, empSur;
     double empSalary;
     Employee(string name, string surname, double salary);
+    virtual ~Employee();
     virtual void display();
     // void display();
 };
@@ -29,6 +30,7 @@ class Manager : public Employee {
    public:
     string mngDep;
     Manager(string name, string surname, double salary, string dep);
+    ~Manager();
     void display();
     void increaseSalary() { empSalary += 200; }
 };
