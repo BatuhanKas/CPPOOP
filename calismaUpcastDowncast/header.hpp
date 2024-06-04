@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   virtual.hpp                                        :+:      :+:    :+:   */
+/*   header.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 20:23:46 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/04 16:42:04 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/04 17:55:43 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VIRTUAL_HPP
-#define VIRTUAL_HPP
+#ifndef HEADER_HPP
+#define HEADER_HPP
 
 #include <iostream>
 using namespace std;
@@ -21,16 +21,17 @@ class Employee {
     string empName, empSur;
     double empSalary;
     Employee(string name, string surname, double salary);
-    virtual ~Employee();
-    virtual void display();
-    // void display();
+    // virtual void display();
+    // virtual ~Employee() { cout << "Employe virtual dest-worked" << endl; };
+    ~Employee() { cout << "Employe-worked" << endl; };
+    void display();
 };
 
 class Manager : public Employee {
    public:
     string mngDep;
     Manager(string name, string surname, double salary, string dep);
-    ~Manager();
+    ~Manager() { cout << "Manager dest-worked" << endl; }
     void display();
     void increaseSalary() { empSalary += 200; }
 };
