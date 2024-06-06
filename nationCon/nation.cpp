@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 12:11:26 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/06 15:16:09 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/06 16:26:11 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void Deutsche::sayHi(Person &person) {
 
 Turkish::Turkish(string name) : Person(name) {}
 
-string Turkish::getNation() const { return "Turkish"; }
+string Turkish::getNation() const { return "Turkish"; };
 
 void Turkish::sayHi(Person &person) {
     if (!getNation().compare(person.getNation())) {
