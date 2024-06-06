@@ -6,7 +6,7 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/06/06 12:11:45 by bkas             ###   ########.fr        #
+#    Updated: 2024/06/06 12:43:32 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME        = nation
 
 PROJECTNAME = Nation Concept
 
-SRC         = main.cpp virtual.cpp pureVirtualFunc.cpp
+SRC         = main.cpp nation.cpp
 
 SRCDIR      = ./
 

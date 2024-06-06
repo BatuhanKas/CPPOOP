@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   nation.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 12:11:28 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/06 12:53:09 by bkas             ###   ########.fr       */
+/*   Created: 2024/06/06 12:43:42 by bkas              #+#    #+#             */
+/*   Updated: 2024/06/06 12:46:16 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NATION_HPP
-#define NATION_HPP
+#include "nation.hpp"
 
-#include <iostream>
-using namespace std;
+int main() {
+    Person p1("mehmet");
+    Person p2("ali");
 
-class Person {
-   private:
-    string name;
-    string nation;
 
-   public:
-    Person(string name, string nation = "Empty!");
-    string getName() const;
-    virtual string getNation();
-    virtual void sayHi(Person &person);
-};
-
-class Deutsche : public Person {
-    public:
-        Deutsche(string name, string nation);
-};
-
-#endif
+    p1.sayHi(p2);
+    
+}
