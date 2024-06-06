@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 16:33:46 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/06 17:04:21 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/06 19:36:54 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,21 @@ void Vehicle::setPrice(double p) { price = p; }
 
 void Vehicle::startEngine() {
     state = true;
+    if (gearNum > 1) return;
     gearNum = 1;
 }
 
 void Vehicle::stopEngine() {
     state = false;
     gearNum = 0;
+    speed = 0;
+}
+
+// Display Function
+
+void Vehicle::display() {
+    cout << "Brand: " << brand << endl;
+    cout << "Price: " << price << endl;
+    cout << "Speed: " << speed << " and Gear: " << gearNum << endl;
+    state ? cout << "Engine On!" << endl : cout << "Engine Off!" << endl;
 }

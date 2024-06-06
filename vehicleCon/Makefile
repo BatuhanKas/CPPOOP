@@ -6,15 +6,15 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/06/06 16:33:26 by bkas             ###   ########.fr        #
+#    Updated: 2024/06/06 19:23:14 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME        = vehiclie
+NAME        = vehicle
 
 PROJECTNAME = Vehicle Concept
 
-SRC         = main.cpp nation.cpp
+SRC         = main.cpp motorcycle.cpp vehicle.cpp car.cpp
 
 SRCDIR      = ./
 
@@ -40,7 +40,7 @@ CC          = c++ -Wall -Wextra -Werror -std=c++98
 
 CFLAGS      = -g
 
-RM          = rm -f
+RM          = rm -rf
 
 ECHO        = echo
 
@@ -59,7 +59,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp | $(OBJDIR)
 	|| $(ECHO) "$(WHITE)[C++] : Compiled $(notdir $<) [$(RED)Error$(RESET)]$(RESET)"
 
 clean:
-	@$(RM) -r $(OBJDIR)
+	@$(RM) $(OBJDIR)
 	@$(ECHO) "$(BLUE)> $(PROJECTNAME) Directory cleaned $(RESET)"
 
 fclean: clean
