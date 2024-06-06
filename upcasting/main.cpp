@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 21:02:33 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/04 14:42:31 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/06 10:06:51 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,8 @@ int main() {
 
     /**
      * @brief Display HK
-     * eger virtual function kullanmazsak ( BILMIYORUM ) ve gidipte
+     * eger virtual function kullanmazsak ve gidipte
      * display func cagirirsak, kendi display funcini calistirir.
-     *
      */
 
     cout << "----------------------------------" << endl;
@@ -49,7 +48,7 @@ int main() {
     /**
      * @brief DOWNCASTING NEDIR ?
      *
-     * Bizim Base sinifimizin pointerini, bizim miras alarak olusturdugumuz
+     * Bizim Base sinifimizin pointerini, miras alarak olusturdugumuz
      * sinifin pointeri haline cevirme islemidir.
      */
 
@@ -117,4 +116,8 @@ int main() {
     cout << endl << "Reference Parameters: " << endl;
     df1(yeni);
     df1(mngr);
+
+    // Devami virtualFunc'un icerisinde...
+    // Kisaca: Referans ve pointerda duzgun calisir.
+    // Value'ile call edersek yanlis calisir.
 }
