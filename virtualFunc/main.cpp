@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 21:02:33 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/06 10:18:28 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/06 11:24:20 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,15 +63,17 @@ int main() {
      * @brief Upcasting islemi yaptigimiz zaman silme isleminde sikinti cikiyor.
      */
 
-    Manager *newptr = new Manager("batuhan", "kas", 13500, "software");
-    Employee *emp = newptr;
+    /*
+        Manager *newptr = new Manager("batuhan", "kas", 13500, "software");
+        Employee *emp = newptr;
 
-    emp->display();
+        emp->display();
 
-    // Employee *p1 = new Manager("kanka", "batu", 123, "pc");
+        // Employee *p1 = new Manager("kanka", "batu", 123, "pc");
 
-    delete emp;
-    // delete p1;
+        delete emp;
+        // delete p1;
+    */
 
     /**
      * @brief Silme isleminde cikan sorunun detayli aciklamasi;
@@ -100,4 +102,6 @@ int main() {
      * kurtulmus olursun.
      *
      */
+
+    pureVirtualFunc();
 }

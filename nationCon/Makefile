@@ -6,13 +6,13 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/06/06 10:25:09 by bkas             ###   ########.fr        #
+#    Updated: 2024/06/06 12:11:45 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME        = virtual
+NAME        = nation
 
-PROJECTNAME = virtual
+PROJECTNAME = Nation Concept
 
 SRC         = main.cpp virtual.cpp pureVirtualFunc.cpp
 
