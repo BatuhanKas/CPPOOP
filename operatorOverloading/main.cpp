@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 18:51:28 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/07 20:36:24 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/07 20:42:31 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,23 @@ int main() {
         // Asagidaki fonksiyon Postfix (p1++)
         void operator++(int);
 
-        Postfix'in icerisine (int) almasinin sebebi su;        
-        
-        ++p1' de yani prefix'te ++ parametresinin onunde aldigi 
-        herhangi bir yas deger yok. Bu yuzden direkt olarak yas degerini arttiriyor.
-        
-        Fakat p1++ yani postfix'te ++ operatorunun onunde bir p1 objesi var,
-        p1 objesinin yas degeri var. Bu yuzden icerisine bir adet int degeri aliyor.
-        Bu int degerini alip islem yapiyor.
+        Postfix'in icerisine (int) almasinin sebebi su;
 
-        Ikisinin arasindaki farkta bu zaten. Overload ederken her ikisinide overload
-        ederken bunlara dikkat etmemiz gerekiyor.
+        ++p1' de yani prefix'te ++ parametresinin onunde aldigi
+        herhangi bir yas deger yok. Bu yuzden direkt olarak yas degerini
+        arttiriyor.
+
+        Fakat p1++ yani postfix'te ++ operatorunun onunde bir p1 objesi var,
+        p1 objesinin yas degeri var. Bu yuzden icerisine bir adet int degeri
+        aliyor. Bu int degerini alip islem yapiyor.
+
+        Ikisinin arasindaki farkta bu zaten. Overload ederken her ikisinide
+        overload ederken bunlara dikkat etmemiz gerekiyor.
 
         BUTUN OPERATORLERIN ALDIGI PARAMETRELERI OGREN VE PRATIK YAP
         BU YAZDIKLARIMI NOTION'A AKTARMAYI UNUTMA
         YARIN OPERATOR OVERLOADING ILE EGZERSIZ YAPACAGIM.
-        
+
      */
     ++p1;
     p1++;
@@ -67,6 +68,7 @@ int main() {
     p2++;
 
     p1--;
+    --p1;
     p1.operator++();
     p1.display();
     p2.display();
