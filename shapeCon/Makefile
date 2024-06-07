@@ -6,15 +6,15 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/06/07 10:32:38 by bkas             ###   ########.fr        #
+#    Updated: 2024/06/07 13:00:50 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME        = vehicle
+NAME        = shape
 
-PROJECTNAME = Vehicle Concept
+PROJECTNAME = Shape Concept
 
-SRC         = main.cpp motorcycle.cpp vehicle.cpp car.cpp
+SRC         = main.cpp shape.cpp
 
 SRCDIR      = ./
 
