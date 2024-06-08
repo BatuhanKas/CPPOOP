@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 18:51:28 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/08 13:13:48 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/08 13:45:26 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,30 +70,6 @@ int main() {
 
     p1--;
     --p1;
-
-    /**
-     * @brief COK ONEMLI 5 YILDIZLIK BIR BILGI VERIYORUM
-     * IYI DINLE
-     *
-     * Yukarida gordugun uzere ++ operatorunu ben manipule ettim
-     * ++ operatorunun sol tarafinda ya hic bir sey olmamasi gerekiyor,
-     * ya da kendi class'imizden bir nesne olmasi gerekiyor. Aksi takdirde
-     * biz bu operator overloading islemini kendi class'imizin icerisinde
-     * yapamiyoruz.
-     *
-     * Simdi asagidaki "<<" ">>" Akis operatorlerine geldik.
-     * cout veyahut cin yani input output streamler kendi ostream
-     * ve istream class'indan uretilmis bir nesnelerdir.
-     * Farki bir class'in nesnesi oldugu icin biz karsilastirma,
-     * toplama, yazdirma gibi islemler yapmak istersek, biz bu
-     * operator overloading islemini Class'imizin disarisinda
-     * yapmak zorundayiz. Cunku sol tarafinda farkli bir Class'in
-     * nesnesi var.
-     *
-     * Zaten cpp dosyasinda da direkt olarak kullanimini yazdim
-     * ayni cout gibi yazilip kullaniliyor bir farki yok
-     * Burayi anlayana kadar canim cikti vallahi billahi.
-     */
 
     cout << p1;
 
