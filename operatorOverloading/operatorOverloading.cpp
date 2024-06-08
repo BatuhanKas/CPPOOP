@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:52:06 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/07 20:39:50 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/08 13:09:37 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@ void Person::operator--(int a) {
     this->age -= a;
 }
 
-void Person::operator--() {
-    age -= 10;
+void Person::operator--() { age -= 10; }
+
+void operator<<(ostream &o, Person p1) {
+    o << "Person Name:" << p1.getName() << endl;
+    o << "Person Surname:" << p1.getSurname() << endl;
+    o << "Person Age:" << p1.getAge() << endl << endl;
 }

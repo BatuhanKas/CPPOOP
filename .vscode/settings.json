@@ -19,7 +19,10 @@
         "chrono": "cpp",
         "iterator": "cpp",
         "memory": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "optional": "cpp",
+        "bitset": "cpp",
+        "locale": "cpp"
     },
     "editor.formatOnSave": true,
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }"
