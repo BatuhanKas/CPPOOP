@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 18:51:28 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/08 14:46:04 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/08 17:36:27 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,12 @@ int main() {
 
      */
 
+    /*
     Person p1("batuhan", "kas", 20);
     Person p2("muhammet", "mutlu", 26);
 
-    // p1 == p2 ? cout << "Same person" << endl
-    //  : cout << "Different Person" << endl;
+    p1 == p2 ? cout << "Same person" << endl
+             : cout << "Different Person" << endl;
 
     ++p1;
     p1++;
@@ -73,7 +74,23 @@ int main() {
 
     cout << p1 << p2;
 
+    p1.operator++();
+    operator<<(cout, p1);
+
     // p1.operator++();
     // p1.display();
     // p2.display();
+
+    */
+
+    Person p1("tayyip", "keles", 123);
+    Person p2("enes", "ates", 433);
+
+    Collection collection;
+    collection += p1;
+    collection += p2;
+
+    collection -= p2;
+
+    cout << collection;
 }

@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:49:55 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/08 14:45:09 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/08 17:40:59 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define OPERATOROVERLOADING_HPP
 
 #include <iostream>
+#include <list>
 using namespace std;
 
 class Person {
@@ -27,7 +28,7 @@ class Person {
     string getSurname() { return surname; };
     int getAge() { return age; };
     void display();
-    bool operator==(Person &oth);
+    bool operator==(const Person &oth) const;
     void operator--();
     void operator--(int);
     // Detayli aciklama main.cpp'de.
@@ -45,8 +46,17 @@ class Person {
 };
 
 // Detayli aciklama notion hesabimda!
-// void operator<<(ostream &o, Person p1);
-
+// void operator<<(ostream &o, Person &p);
 ostream &operator<<(ostream &o, Person &p);
+
+class Collection {
+   public:
+    list<Person> persons;
+    void operator+=(Person &p);
+    void operator-=(Person &p);
+    // void print();
+};
+
+ostream &operator<<(ostream &o, Collection &c);
 
 #endif

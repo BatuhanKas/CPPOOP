@@ -6,7 +6,7 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/06/07 18:43:51 by bkas             ###   ########.fr        #
+#    Updated: 2024/06/08 17:29:19 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME        = operator
 
 PROJECTNAME = Operator Overloading Concept
 
-SRC         = main.cpp operatorOverloading.cpp
+SRC         = main.cpp operatorOverloading.cpp collection.hpp
 
 SRCDIR      = ./
 
@@ -36,7 +36,7 @@ OBJ         = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(BASE)))
 
 BASE        = $(basename $(notdir $(SRC)))
 
-CC          = c++ -Wall -Wextra -Werror -std=c++98
+CC          = c++ -Wall -Wextra -Werror -std=c++11
 
 CFLAGS      = -g
 

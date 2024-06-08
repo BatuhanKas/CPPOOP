@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:52:06 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/08 14:47:00 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/08 18:11:07 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void Person::display() {
 }
 
 // Operator == Func
-bool Person::operator==(Person &oth) {
+bool Person::operator==(const Person &oth) const {
     return (name == oth.name && surname == oth.surname);
 }
 
