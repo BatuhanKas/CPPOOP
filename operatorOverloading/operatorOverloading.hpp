@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:49:55 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/08 12:45:58 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/08 14:45:09 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ class Person {
     // void operator<<(ostream &o, Person &p);
 };
 
-void operator<<(ostream &o, Person p1);
+// Detayli aciklama notion hesabimda!
+// void operator<<(ostream &o, Person p1);
+
+ostream &operator<<(ostream &o, Person &p);
 
 #endif
