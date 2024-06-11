@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 18:51:28 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/08 17:36:27 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/11 11:18:33 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,15 @@ int main() {
 
         // Asagidaki fonksiyon Prefix (++p1)
         void operator++();
+        ++p1;
         // Asagidaki fonksiyon Postfix (p1++)
         void operator++(int);
+        p1++;
 
         Postfix'in icerisine (int) almasinin sebebi su;
 
         ++p1' de yani prefix'te ++ parametresinin onunde aldigi
-        herhangi bir yas deger yok. Bu yuzden direkt olarak yas degerini
+        herhangi bir yas degeri yok. Bu yuzden direkt olarak yas degerini
         arttiriyor.
 
         Fakat p1++ yani postfix'te ++ operatorunun onunde bir p1 objesi var,

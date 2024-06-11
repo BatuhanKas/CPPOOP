@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 20:23:46 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/08 18:27:19 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/08 18:28:05 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ class Dog : public Animal {
    public:
     void talk() { cout << "Havhav" << endl; }
 };
-
 class Cat : public Animal {
    public:
     void talk() { cout << "Meow" << endl; }
