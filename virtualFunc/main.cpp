@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 21:02:33 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/06 11:24:20 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/11 13:19:07 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,24 +28,24 @@ int main() {
      * @brief UPCASTING'IN DEVAMI YAZDIGIM KISIM BURADA !!!
 
     // referans kisimi
-    Employee yeni("Ali", "Kefal", 3152);
-    Manager mngr("Usman", "Aga", 6666, "CicekTaksi");
-    cout << endl << "Reference Parameters: " << endl;
-    df1(yeni);
-    df1(mngr);
-    // pointer kisimi
-    cout << endl << "Pointer Parameters: " << endl;
-    Employee *ptr = new Employee("Sinan", "Kaya", 3131);
-    Manager *ptr2 = new Manager("Maraz", "Ali", 9999, "Belali");
-    df2(ptr);
-    df2(ptr2);
-    // value kisimi
-    cout << endl << "Value : " << endl;
-    df3(yeni);
-    df3(mngr);
-
-    // virtual yazsak bile, Referans ya da Pointer ile cagirmazsak,
-    // Fonksiyon duzgun calismayacaktir. Daha detayli asagida.
+        Employee yeni("Ali", "Kefal", 3152);
+        Manager mngr("Usman", "Aga", 6666, "CicekTaksi");
+        cout << endl << "Reference Parameters: " << endl;
+        df1(yeni);
+        df1(mngr);
+        // pointer kisimi
+        cout << endl << "Pointer Parameters: " << endl;
+        Employee *ptr = new Employee("Sinan", "Kaya", 3131);
+        Manager *ptr2 = new Manager("Maraz", "Ali", 9999, "Belali");
+        df2(ptr);
+        df2(ptr2);
+        // value kisimi
+        cout << endl << "Value : " << endl;
+        df3(yeni);
+        df3(mngr);
+    
+        // virtual yazsak bile, Referans ya da Pointer ile cagirmazsak,
+        // Fonksiyon duzgun calismayacaktir. Daha detayli asagida.
 
      */
 
