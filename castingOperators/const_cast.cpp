@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   const_cast.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 10:32:58 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/24 10:19:25 by bkas             ###   ########.fr       */
+/*   Created: 2024/06/24 18:02:40 by bkas              #+#    #+#             */
+/*   Updated: 2024/06/24 18:44:38 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "multin.hpp"
+#include "header.hpp"
 
-int main() {
-    CClass c1;
-    // c1.a = 5;
-    // c1.b = 10;
+void constCast() {
+    const base b1 = 10;
+    b1.display();
+
+    base b2 = 5;
+    const_cast<base &>(b1) = b2.getx();
+
+    b1.display();
 }

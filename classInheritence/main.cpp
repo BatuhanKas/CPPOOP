@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 11:07:10 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/23 22:45:39 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/24 10:26:51 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main() {
     c1.printx();
     derivedClass d1(3, 5);
     d1.printx();
+    
 
     // derivedClass d2(d1);
 

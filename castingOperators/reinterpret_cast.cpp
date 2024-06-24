@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   reinterpret_cast.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 10:32:58 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/24 10:19:25 by bkas             ###   ########.fr       */
+/*   Created: 2024/06/24 18:50:47 by bkas              #+#    #+#             */
+/*   Updated: 2024/06/24 19:04:51 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "multin.hpp"
+#include "header.hpp"
 
-int main() {
-    CClass c1;
-    // c1.a = 5;
-    // c1.b = 10;
+void reinterpretCast() {
+    int a = 5;
+
+    void *ptr = reinterpret_cast<void *>(&a);
+    int *ptr2 = reinterpret_cast<int *>(ptr);
+    cout << *ptr2 << endl;
 }

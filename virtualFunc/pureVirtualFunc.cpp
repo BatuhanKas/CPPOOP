@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 10:24:25 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/11 13:30:19 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/24 16:23:03 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,17 @@ void pureVirtualFunc() {
      * Header dosyasina da bir kac aciklama yazacagim.
      *
      */
-
-    Cat *cat = new Cat();
-    Dog *dog = new Dog();
-    Duck *duck = new Duck();
+       
+    /*
+        Cat *cat = new Cat();
+        Dog *dog = new Dog();
+        Duck *duck = new Duck();
+    */
 
     // animal'dan obje uretemeyiz dedik, pointer kullanamayiz demedik.
     // Animal object;
     // Bir upcasting islemi yaptik. Detayli aciklama Header dosyasinda.
-    Animal *ptr[] = {cat, dog, duck};
+    Animal *ptr[] = {new Cat(), new Dog(), new Duck()};
 
     for (size_t i = 0; i < 3; i++) {
         ptr[i]->talk();

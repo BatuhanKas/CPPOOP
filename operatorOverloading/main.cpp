@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 18:51:28 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/11 11:18:33 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/12 10:50:18 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,11 +88,14 @@ int main() {
     Person p1("tayyip", "keles", 123);
     Person p2("enes", "ates", 433);
 
-    Collection collection;
-    collection += p1;
-    collection += p2;
+    // cout << "p1:age: " << p1.getAge() << endl;
+    // cout << "p1:age: " << ++p1 << endl;
 
-    collection -= p2;
+    // Collection collection;
+    // collection += p1;
+    // collection += p2;
 
-    cout << collection;
+    // collection -= p2;
+
+    // cout << collection;
 }

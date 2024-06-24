@@ -5,15 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 10:32:58 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/24 10:19:25 by bkas             ###   ########.fr       */
+/*   Created: 2024/06/24 10:29:20 by bkas              #+#    #+#             */
+/*   Updated: 2024/06/24 11:40:40 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "multin.hpp"
+#include "access.hpp"
 
 int main() {
-    CClass c1;
-    // c1.a = 5;
-    // c1.b = 10;
+    derived d1;
+
+    d1.setx(16);
+
+    d1.display();
 }
