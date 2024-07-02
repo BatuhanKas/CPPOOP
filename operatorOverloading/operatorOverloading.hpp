@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:49:55 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/08 18:28:05 by bkas             ###   ########.fr       */
+/*   Updated: 2024/07/02 18:00:33 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,18 @@ class Person {
 
    public:
     Person(string name = "", string surname = "", int age = 0);
-    string getName() { return name; };
-    string getSurname() { return surname; };
-    int getAge() { return age; };
+    string getName() const { return name; };
+    string getSurname() const { return surname; };
+    int getAge() const { return age; };
     void display();
     bool operator==(const Person &oth) const;
     void operator--();
     void operator--(int);
     // Detayli aciklama main.cpp'de.
     // Asagidaki fonksiyon Prefix (++p1)
-    void operator++();
+    Person &operator++();
     // Asagidaki fonksiyon Postfix (p1++)
-    void operator++(int);
+    Person operator++(int);
     /*
         integer gibi veri yapilarinin kopyalanmasi kolaydir fakat
         vector, string, list, use defined data type gibi yapilar
@@ -43,11 +43,12 @@ class Person {
         kopyalamak yerine referans aliriz.
     */
     // void operator<<(ostream &o, Person &p);
+    // friend ostream &operator<<(ostream &o, const Person &p);
 };
 
 // Detayli aciklama notion hesabimda!
 // void operator<<(ostream &o, Person &p);
-ostream &operator<<(ostream &o, Person &p);
+ostream &operator<<(ostream &o, const Person &p);
 
 class Collection {
    public:

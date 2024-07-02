@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:52:06 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/12 10:50:07 by bkas             ###   ########.fr       */
+/*   Updated: 2024/07/02 18:01:03 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,17 @@ bool Person::operator==(const Person &oth) const {
 }
 
 // Asagidaki fonksiyon Prefix (++p1)
-void Person::operator++() { age++; };
+Person &Person::operator++() {
+    age++;
+    return *this;
+};
 
 // Asagidaki fonksiyon Postfix (p1++)
-void Person::operator++(int) { age++; };
+Person Person::operator++(int) {
+    Person p1 = *this;
+    this->age++;
+    return p1;
+};
 
 void Person::operator--(int a) {
     a = 5;
@@ -72,7 +79,7 @@ void Person::operator--() { age -= 10; }
  * bu bir akis ve ben bu akisi surekli tetiklemek istiyorum.
  * Buna zincirleme akis operatoru "<<" deniyor.
  */
-ostream &operator<<(ostream &o, Person &p) {
+ostream &operator<<(ostream &o, const Person &p) {
     o << "Person Name:" << p.getName() << endl;
     o << "Person Surname:" << p.getSurname() << endl;
     o << "Person Age:" << p.getAge() << endl << endl;

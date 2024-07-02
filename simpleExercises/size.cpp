@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reinterpret_cast.cpp                               :+:      :+:    :+:   */
+/*   size.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/24 18:50:47 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/24 19:05:42 by bkas             ###   ########.fr       */
+/*   Created: 2024/07/02 13:32:46 by bkas              #+#    #+#             */
+/*   Updated: 2024/07/02 14:07:46 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.hpp"
+#include <iostream>
+using namespace std;
 
-void reinterpretCast() {
-    int a = 5;
+int main() {
+    string msg = "batuhan";
 
-    void *ptr = reinterpret_cast<void *>(&a);
-    int *ptr2 = reinterpret_cast<int *>(ptr);
-    cout << *ptr2 << endl;
+    int len = msg.size();
+    cout << len << endl;
 }

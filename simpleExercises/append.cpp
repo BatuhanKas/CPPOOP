@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reinterpret_cast.cpp                               :+:      :+:    :+:   */
+/*   append.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/24 18:50:47 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/24 19:05:42 by bkas             ###   ########.fr       */
+/*   Created: 2024/07/02 13:32:46 by bkas              #+#    #+#             */
+/*   Updated: 2024/07/02 15:46:57 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.hpp"
+#include <iostream>
+using namespace std;
 
-void reinterpretCast() {
-    int a = 5;
+int main() {
+    string msg = "batuhan kas";
 
-    void *ptr = reinterpret_cast<void *>(&a);
-    int *ptr2 = reinterpret_cast<int *>(ptr);
-    cout << *ptr2 << endl;
+    // cout << msg.append(" kas") << endl;
+    // kisaca cout << msg + " kas" << endl; yapmamizi sagliyor.
+
+    // int index = msg.find("kas");
+    // cout << index << endl;
+    // kas kelimesini buldugu indexi donduruyor.
+
+    cout << msg.insert(2, "AAAA");
 }

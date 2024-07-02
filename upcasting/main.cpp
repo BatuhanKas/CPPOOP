@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 21:02:33 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/06 10:06:51 by bkas             ###   ########.fr       */
+/*   Updated: 2024/07/02 18:11:25 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int main() {
 
     m2->display();
 
-    Employee e1("Kadir", "Soker", 7500);
+    Employee e1("Kadir", "Soker", 17500);
     Employee *pe1 = &e1;
 
     Manager *m = (Manager *)pe1;
@@ -114,8 +114,14 @@ int main() {
     Employee yeni("Ali", "Kefal", 3152);
     Manager mngr("Usman", "Aga", 6666, "CicekTaksi");
     cout << endl << "Reference Parameters: " << endl;
-    df1(yeni);
-    df1(mngr);
+    // df1(yeni);
+    // df1(mngr);
+
+    // df2(&yeni);
+    // df2(&mngr);
+
+    // df3(yeni);
+    // df3(mngr);
 
     // Devami virtualFunc'un icerisinde...
     // Kisaca: Referans ve pointerda duzgun calisir.

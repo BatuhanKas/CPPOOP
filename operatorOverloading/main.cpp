@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 18:51:28 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/12 10:50:18 by bkas             ###   ########.fr       */
+/*   Updated: 2024/07/02 17:41:57 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,35 +58,35 @@ int main() {
 
      */
 
-    /*
     Person p1("batuhan", "kas", 20);
     Person p2("muhammet", "mutlu", 26);
 
-    p1 == p2 ? cout << "Same person" << endl
-             : cout << "Different Person" << endl;
+    // p1 == p2 ? cout << "Same person" << endl
+    //          : cout << "Different Person" << endl;
 
     ++p1;
     p1++;
+    // ++p1;
+    cout << p1++ << endl;
+    cout << ++p1 << endl;
 
-    ++p2;
-    p2++;
+    // ++p2;
+    // p2++;
 
-    p1--;
-    --p1;
+    // p1--;
+    // --p1;
 
-    cout << p1 << p2;
+    // cout << p1 << p2;
 
-    p1.operator++();
-    operator<<(cout, p1);
+    // p1.operator++();
+    // operator<<(cout, p1);
 
     // p1.operator++();
     // p1.display();
     // p2.display();
 
-    */
-
-    Person p1("tayyip", "keles", 123);
-    Person p2("enes", "ates", 433);
+    // Person p1("tayyip", "keles", 123);
+    // Person p2("enes", "ates", 433);
 
     // cout << "p1:age: " << p1.getAge() << endl;
     // cout << "p1:age: " << ++p1 << endl;

@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 10:24:25 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/24 16:23:03 by bkas             ###   ########.fr       */
+/*   Updated: 2024/07/02 16:16:28 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ void pureVirtualFunc() {
      * topluyoruz, kodda daha iyi anlasilir olacaktir.
      *
      * Header dosyasina da bir kac aciklama yazacagim.
-     *
      */
-       
+
     /*
         Cat *cat = new Cat();
         Dog *dog = new Dog();
