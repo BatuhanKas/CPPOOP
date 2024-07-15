@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 21:02:33 by bkas              #+#    #+#             */
-/*   Updated: 2024/06/11 13:19:07 by bkas             ###   ########.fr       */
+/*   Updated: 2024/07/15 10:47:59 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,37 @@ int main() {
         cout << endl << "Value : " << endl;
         df3(yeni);
         df3(mngr);
-    
+
         // virtual yazsak bile, Referans ya da Pointer ile cagirmazsak,
         // Fonksiyon duzgun calismayacaktir. Daha detayli asagida.
 
      */
+    Employee *a[] = {
+        new Employee("Batuhan", "Kas", 123),
+        new Manager("Musab", "Kefal", 6666, "CicekTaksi")
+    };
+    cout << endl << "Reference Parameters: " << endl;
+    for (int i = 0; i < 2; i++) {
+        a[i]->display();
+    }
+
+    // Employee yeni("lAi", "Kefal", 3152);
+    // Manager mngr("Usman", "Aga", 6666, "CicekTaksi");
+    // yeni.display();
+    // mngr.display();
+    // a->display();
+    // df1(yeni);
+    // df1(mngr);
+    // pointer kisimi
+    // cout << endl << "Pointer Parameters: " << endl;
+    // Employee *ptr = new Employee("Sinan", "Kaya", 3131);
+    // Manager *ptr2 = new Manager("Maraz", "Ali", 9999, "Belali");
+    // df2(ptr);
+    // df2(ptr2);
+    // // value kisimi
+    // cout << endl << "Value : " << endl;
+    // df3(yeni);
+    // df3(mngr);
 
     /**
      * @brief SON VALUE KISMINDA OLAN BITEN
@@ -103,5 +129,5 @@ int main() {
      *
      */
 
-    pureVirtualFunc();
+    // pureVirtualFunc();
 }
