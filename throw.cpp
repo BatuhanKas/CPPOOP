@@ -6,20 +6,19 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:54:40 by bkas              #+#    #+#             */
-/*   Updated: 2024/07/19 14:24:05 by bkas             ###   ########.fr       */
+/*   Updated: 2024/07/19 14:54:44 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 using namespace std;
 
-void islem(int x, int y) throw(logic_error, string) {
+void islem(int x, int y) throw(logic_error, runtime_error) {
     if (x == 0) {
         throw logic_error("Bir sayi sifir olamaz");
     }
     if (x < 0 || y < 0) {
-        string errmsg = "bir sayi neg olamaz.";
-        throw errmsg;
+        throw runtime_error("bir sayi neg olamaz.");
     }
     cout << "Result: " << x / y << endl;
 }
